@@ -22,7 +22,7 @@ async def leave_from_inactive_call():
                     all_chat_id.append(call_chat_id)
                 call_status = getattr(call, "status")
                 try:
-                    if call_chat_id == chat_id and call_status == "not_playing":
+                    if call_chat_id == chat_id and call_status == "not_playinng":
                         await client(LeaveChannelRequest(chat_id))
                     elif chat_id not in all_chat_id:
                         await client(LeaveChannelRequest(chat_id))
